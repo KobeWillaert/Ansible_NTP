@@ -10,3 +10,7 @@
 
   - name: Install NTP
     apt: package=ntp,ntpdate state=present update_cache=yes
+
+  - name: Copy over NTP config
+    template: src=ntp.conf dest=/etc/ntp.conf
+
