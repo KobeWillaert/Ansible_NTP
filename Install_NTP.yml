@@ -14,3 +14,5 @@
   - name: Copy over NTP config
     template: src=ntp.conf dest=/etc/ntp.conf
 
+  - name: restart ntp
+    service: name=ntp state=restarted
