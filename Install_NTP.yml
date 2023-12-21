@@ -8,6 +8,5 @@
     apt:
       update_cache: yes
 
-  - name: Install NTP 
-    apt: name=ntp update_cache: yes
-
+  - name: Install NTP
+    apt: package=ntp,ntpdate state=present update_cache=yes
